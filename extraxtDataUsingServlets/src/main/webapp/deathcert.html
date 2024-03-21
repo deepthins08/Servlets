@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Death Certificate Form</title>
+</head>
+<body>
+
+<form action="deadPerson" method="post">
+<pre>
+    Name: <input type="text" name="name">
+    age : <input type="text" name="age">
+    DOD : <input type="date" name="date">
+    Time of Death: <input type="time" name="time">
+    Gender:
+           <input type="radio" name="gender" value="male"> Male
+           <input type="radio" name="gender" value="female">Female
+           <input type="radio" name="gender" value="other">Others
+
+    Diseased Status:
+    <input type="radio" name="status" value="single">Single
+    <input type="radio" name="status" value="married">Married
+    <input type="radio" name="status" value="widow">Widow
+    <input type="radio" name="status" value="divorced">Divorced
+    <input type="radio" name="status" value="single parent">Single Parent
+    Place of Death: <input type="text" name="place">
+    Cause of death:
+    <select name="cause">
+        <option value="">select</option>
+        <option>Accident</option>
+        <option>Disease</option>
+        <option>Murder</option>
+        <option>Natural</option>
+        <option>Suicide</option>
+    </select>
+    Diseased Father's Name: <input type="text" name="father">
+    Diseased Mother's Name: <input type="text" name="mother">
+    Adhar Number: <input type="text" name="adhar">
+    Informants Name: <input type="text" name="informant">
+    Informants Mobile Number: <input type="text" name="mobile">
+    Informants PLace: <input type="text" name="address">
+
+    Diseased Relation:
+    <select name="relation">
+        <option value="">select</option>
+        <option>Brother</option>
+        <option>Father</option>
+        <option>Husband</option>
+        <option>Mother</option>
+        <option>Wife</option>
+        <option>Other</option>
+    </select>
+
+    <input type="submit" value="Apply">
+</pre>
+</form>
+</body>
+</html>

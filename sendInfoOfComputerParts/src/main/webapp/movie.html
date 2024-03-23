@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Ticket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="./movie.js"></script>
+</head>
+<body class="bg-secondary">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="#"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div  id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active text-white fs-3 " href="./index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active text-white fs-3" href="./ComputerPart.html">ComputerParts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white fs-3" href="./TvRecharge.html">TvRecharge</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active text-white fs-3" href=./Fruits.html>Fruits</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+</ul>
+</div>
+</div>
+</nav>
+
+<form action="bookMovie" method="post" id="movieId"  name="bookMovie">
+
+
+
+    <div class="container mt-5 mb-5 d-flex justify-content-center">
+        <div class="card px-5 py-4 bg-dark">
+            <div class="card-body">
+                <h6 class="card-title mb-3 text-white fs-1">MovieTicket</h6>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="mb-1">
+
+                                <label for="cname" class="form-label text-white">Customer Name</label>
+                                <input type="text" class="form-control" name="cname" id="cname" aria-describedby="modelHelp" onblur="setName()" >
+                                <!--                               <div class="invalid-feedback">Please Enter a valid Name</div>-->
+                                <span id="nerror"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="mb-1">
+
+                                <label for="mobile" class="form-label text-white">Customer Mobile NUmber</label>
+                                <input type="text" class="form-control" name="mobile" id="mobile" aria-describedby="modelHelp" onblur="number()">
+                                <!--                                <div class="invalid-feedback">Please Enter valid Customer Id</div>-->
+                                <span id="mobileError"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group mb-4 mt-5">
+                                <label class="input-group-text" for="movie">Movies</label>
+                                <select class="form-select" id="movie" name="movie" onblur="selectMovie()">
+                                    <option selected value="0">Choose...</option>
+                                    <option value="Barbie">Barbie</option>
+                                    <option value="Dune : Part Two ">Dune : Part Two</option>
+                                    <option value="Aquaman and the Lost Kingdom">Aquaman and the Lost Kingdom</option>
+                                    <option value="Madame Web">Madame Web</option>
+                                    <option value="Napoleon">Napoleon</option>
+                                    <option value="Oppenheimer">Oppenheimer</option>
+                                    <option value="Road House">Road House</option>
+                                    <option value="The Marvels">The Marvels</option>
+                                    <option value="The Nun II">The Nun II</option>
+                                </select>
+                                <!--                                <div class="invalid-feedback">Please select a fruit</div>-->
+                                <span id="movieError"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group mb-4 mt-5">
+                                <label class="input-group-text" for="seat">No of Seats</label>
+                                <select class="form-select" id="seat" name="seat"  onblur="bookSeats()">
+                                    <option selected value="0">Choose...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+
+                                </select>
+                                <!--                                <div class="invalid-feedback">Please select quantity</div>-->
+                                <span id="seatError"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+
+                            <input type="radio" class="btn-check" name="cost" id="cost"  autocomplete="off" onblur="buy()" >
+                            <label class="btn btn-secondary" for="cost">UPI/Online</label>
+
+
+                            <input type="radio" class="btn-check" name="cost" id="cost1" autocomplete="off" onblur="buy()">
+                            <label class="btn btn-secondary" for="cost1">Debit/Credit Card</label>
+                            <span id="radioError"></span>
+                            <!--                            <div class="invalid-feedback">Please select Payment method</div>-->
+                        </div></div></div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <div class="input-group mb-3 mt-5">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" name="check" id="check"  onblur="confirm()" >
+                                    <label class="form-check-label text-white" for="check">
+                                        Confirm Booking
+                                    </label>
+                                    <!--                                                <div class="invalid-feedback">Please Confirm Payment</div>-->
+                                    <span id="box"></span>
+                                </div></div></div></div></div>
+
+
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+
+                            <button type="submit"  disabled id="btn"  class="me-5 ms-5">Book</button>
+
+
+                            <a href="./movie.html" class="ms-5"><input type="button" placeholder="Clear" value="Refresh" ></a>
+                        </div></div>
+
+                </div>
+
+            </div></div></div>
+</form>
+
+
+
+</body>
+</html>
